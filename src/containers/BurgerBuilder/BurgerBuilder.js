@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/Auxiliary';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -32,7 +32,7 @@ class BurgerBuilder extends Component {
 
     componentDidMount () {
         console.log(this.props);
-        axios.get( 'https://react-my-burger.firebaseio.com/ingredients.json' )
+        axios.get( 'https://burger-builder-307fe.firebaseio.com/ingredients.json')
             .then( response => {
                 this.setState( { ingredients: response.data } );
             } )
